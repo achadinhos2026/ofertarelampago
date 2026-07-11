@@ -1,0 +1,23 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Define o tempo inicial: 15 minutos e 37 segundos (em segundos)
+    let time = (15 * 60) + 37; 
+    const timerElement = document.getElementById('timer');
+
+    const updateTimer = () => {
+        // Formata os minutos e segundos para manter o padrão 00:00
+        const minutes = Math.floor(time / 60);
+        const seconds = time % 60;
+
+        timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+        if (time > 0) {
+            time--;
+        } else {
+            // Se zerar, reinicia o cronômetro para manter o gatilho rodando
+            time = (15 * 60) + 37; 
+        }
+    };
+
+    // Atualiza a cada 1 segundo (1000 ms)
+    setInterval(updateTimer, 1000);
+});
