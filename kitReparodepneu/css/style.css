@@ -54,6 +54,53 @@ body {
     margin-bottom: 15px;
     display: block;
 }
+    /* Container da Imagem para posicionar as tags */
+.image-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Container das Tags */
+.badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+/* Estilo base das Tags */
+.badge {
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    letter-spacing: 0.5px;
+}
+
+/* Cor específica da Tag de Desconto (Vermelho) */
+.badge-discount {
+    background-color: #eb3b3b; 
+}
+
+/* Cor específica da Tag de Frete (Verde) */
+.badge-shipping {
+    background-color: #27ae60; 
+}
+
+/* Atualização na imagem para se comportar bem no novo container */
+.product-image {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    /* A margem inferior foi removida daqui pois agora está no .image-container */
+    margin-bottom: 0; 
+}
 
 /* Botão Shopee */
 .btn-shopee {
